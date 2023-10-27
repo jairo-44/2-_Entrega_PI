@@ -9,12 +9,12 @@ Sistema para pessoas que necessitam de programas de emagrecimento, com orientaç
 
 Integrantes da equipe:
 
-Bianca Silva de Oliveira
-Cicero Pereira Lira
-Eduardo Motta Justo
-Giovany Dal Bello
-Guilherme Lima Rett
-Jairo Souza dos Santos
+Bianca Silva de Oliveira;
+Cicero Pereira Lira;
+Eduardo Motta Justo;
+Giovany Dal Bello;
+Guilherme Lima Rett;
+Jairo Souza dos Santos;
 
 
 Orientador: Professor Gustavo Moreira Calixto
