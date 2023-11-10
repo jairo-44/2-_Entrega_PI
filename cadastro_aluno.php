@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -40,7 +44,7 @@
 <body>
 
 <div id="logo">
-    <img src="/Imagens/icons8-barra-de-peso-100.png" alt="logo">    
+<img src="icons8-barra-de-peso-100.png" alt="logo">
 </div>
 <h3 class="text-center text-white pt-5" style="margin-top: -75px;">________________________________________</h3>
 <br><br>
@@ -51,23 +55,28 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
+                    <form method="POST" action="processa.php">
                             <h3 class="text-center text-info">CADASTRO</h3>
                             <br>
 
                             <h4 class="text-center text-info">Aluno / Paciente</h4><br>
-
+                            <?php
+                            if (isset($_SESSION['msg']))
+                                echo $_SESSION['msg'];
+                                unset($_SESSION['msg'] );
+                            ?>
+                        
                             <div class="form-group">
                                 <input type="text" name="nome_aluno" id="nome_aluno" class="form-control" class="form-control" placeholder="Nome">
                             </div>
 
                             <div class="form-group">                                
-                                <input type="text" name="cpf_aluno" id="cpf_aluno" class="form-control" placeholder="CPF (sem ponto ou traço)">
+                                <input type="int" name="cpf_aluno" id="cpf_aluno" class="form-control" placeholder="CPF (sem ponto ou traço)">
                             </div>
 
                             <div class="form-group row">
                                 <div class="col">
-                                    <input type="text" name="idade_aluno" id="idade_aluno" class="form-control" placeholder="Idade">
+                                    <input type="int" name="idade_aluno" id="idade_aluno" class="form-control" placeholder="Idade">
                                 </div>
                                 <div class="col">
                                     <select name="sexo_aluno" id="sexo_aluno" class="form-control">
@@ -113,19 +122,19 @@
                                 <div class="col">
                                     <div class="form-group">                                        
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="opcao" id="emagrecimento" value="emagrecimento">
+                                            <input class="form-check-input" type="radio" name="emagrecimento" id="emagrecimento" value="emagrecimento">
                                             <label class="form-check-label" for="emagrecimento" style="color: white;">Emagrecimento</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="opcao" id="ganho_massa" value="ganho_massa">
+                                            <input class="form-check-input" type="radio" name="ganho_massa" id="ganho_massa" value="ganho_massa">
                                             <label class="form-check-label" for="ganho_massa" style="color: white;">Ganho de massa muscular</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="opcao" id="condicionamento" value="condicionamento">
+                                            <input class="form-check-input" type="radio" name="condicionamento" id="condicionamento" value="condicionamento">
                                             <label class="form-check-label" for="condicionamento" style="color: white;">Condicionamento físico</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="opcao" id="melhora_saude" value="melhora_saude">
+                                            <input class="form-check-input" type="radio" name="melhora_saude" id="melhora_saude" value="melhora_saude">
                                             <label class="form-check-label" for="melhora_saude" style="color: white;">Melhora da saúde</label>
                                         </div>
                                     </div>
@@ -169,7 +178,7 @@
                                     <div class="form-group">
                                         <label class="text-info">Algum problema de  saúde?</label>
                                         <div class="form-check form-check-inline">
-                                            <input type="text" name="qtd_ativ" id="qtd_ativ" class="form-control col-50" placeholder="Qual?">
+                                            <input type="text" name="prob_saude" id="prob_saude" class="form-control col-50" placeholder="Qual?">
                                         </div>                              
                                 </div><br>                             
                             </div>
@@ -186,9 +195,7 @@
                                 </div><br><br>
 
 
-                                <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success">Enviar formulário</button>
-                           
+                                <input type="submit" value="Enviar Formulário">
                         </form>
                     </div>
                 </div>
