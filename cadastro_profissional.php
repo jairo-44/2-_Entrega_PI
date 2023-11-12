@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -42,7 +46,7 @@
 <div id="logo">
     <img src="/Imagens/icons8-barra-de-peso-100.png" alt="logo">    
 </div>
-<h3 class="text-center text-white pt-5" style="margin-top: -75px;">________________________________________</h3>
+<h3 class="text-center text-white pt-5" style="margin-top: -75px;">______________________________________________</h3>
 <br>
 
     <div id="login">
@@ -51,22 +55,28 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
+
+                       <form method="POST" action="processa_prof.php">
                             <h3 class="text-center text-info">CADASTRO</h3>
                             <br>
+                            <?php
+                            if (isset($_SESSION['msg']))
+                                echo $_SESSION['msg'];
+                                unset($_SESSION['msg'] );
+                            ?>
 
                             <h4 class="text-center text-info">Profissional</h4>
 
-                            <div class="form-group">
-                                <label class="text-info">Escolha uma opção:</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="opcao_nutri" id="nutricionista" value="nutricionista">
-                                    <label class="form-check-label" for="nutricionista" style="color: white;">Nutricionista</label>
+                            <div>
+                                <label class="text-info">Qual profissional buscar?</label>
+                                <div>
+                                    <select name="opcao_prof" id="opcao_prof" class="form-control">  
+                                    <option value="ops">Escolha uma pção</option>                                      
+                                        <option value="nutri">Nutricionista</option>
+                                        <option value="psronal">Personal Trainer</option>
+                                    </select>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="opcao_peronal" id="personal_trainer" value="personal_trainer">
-                                    <label class="form-check-label" for="personal_trainer" style="color: white;">Personal Trainer</label>
-                                </div><br><br>
+                            </div><br>
 
 
                             <div class="form-group">
@@ -102,64 +112,78 @@
                                 <div class="col">
                                     <input type="text" name="especialidade" id="especialidade" class="form-control" placeholder="Especialidade">
                                 </div>
-                            </div>
+                            </div>    
                             
+                            <div class="form-group">
+                                <label class="text-info">Defina sua senha:</label>
+                                <div class="mb-3">
+                                    <input type="text" name="email_prof" id="email_prof" class="form-control" placeholder="Email">
+                                </div>
+                                <div>
+                                    <input type="password" name="senha_prof" id="senha_prof" class="form-control" placeholder="Senha">
+                                </div>
+                            </div>                          
+
                             <br>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >____________________________________________</h3>
                             <h4 class="text-left text-info">Formação</h4>
+
+
                             <div class="form-group row">
-                                <div class="col">
-                                    <input type="text" name="form_academ" id="form_academ" class="form-control col-40" placeholder="Formação">
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
-                                </div>
-                            </div>      
-                            <div class="form-group row">
-                                <div class="col">
-                                    <input type="text" name="especializacao1" id="especializacao1" class="form-control col-40" placeholder="Especialização 1">
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
-                                </div>
-                            </div>     
-                            </div>      
-                            <div class="form-group row">
-                                <div class="col">
-                                    <input type="text" name="especializacao2" id="especializacao2" class="form-control col-40" placeholder="Especialização 2">
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
-                                </div>
-                            </div>     
-                            <div class="form-group row">
-                                <div class="col">
-                                    <input type="text" name="especializacao3" id="especializacao3" class="form-control col-40" placeholder="Especialização 3">
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
-                                </div>
-                            </div>   
+                            <div class="col-7">
+                                <input type="text" name="form_academ" id="form_academ" class="form-control" placeholder="Formação">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-7">
+                                <input type="text" name="especializacao1" id="especializacao1" class="form-control" placeholder="Especialização 1">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-7">
+                                <input type="text" name="especializacao2" id="especializacao2" class="form-control" placeholder="Especialização 2">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-7">
+                                <input type="text" name="especializacao3" id="especializacao3" class="form-control" placeholder="Especialização 3">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
+                            </div>
+                        </div>
                             <div class="form-group">                                        
                                 <textarea name="observacoes_prof" id="observacoes_prof" class="form-control" rows="4" placeholder="Conte mais sobre você."></textarea>
                             </div>
 
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >____________________________________________</h3>
                             <h4 class="text-left text-info">Atendimento on-line?</h4>
 
                             <div class="form-group">
                                 
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="atend_oline1" id="atend_oline1" value="atend_oline1">
-                                    <label class="form-check-label" for="atend_oline1" style="color: white;">Sim</label>
+                            <div>
+                                    <select name="opcao_atend" id="opcao_atend" class="form-control">  
+                                    <option value="opcao_atend" >Escolha uma pção</option>                                      
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="atend_oline2" id="atend_oline2" value="atend_oline2">
-                                    <label class="form-check-label" for="atend_oline2" style="color: white;">Não</label>
                                 </div>
             
                             
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >____________________________________________</h3>
                             <label class="text-info">As informações por mim prestadas são verdadeiras  </label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="check_info" id="check_info" value="check_info">
@@ -177,9 +201,7 @@
                                 </div><br><br>
 
 
-                                <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success">Enviar formulário</button>
-                                </div>
+                                <input type="submit" value="Enviar Formulário">
                         </form>
                     </div>
                 </div>

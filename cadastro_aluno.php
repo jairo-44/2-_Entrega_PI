@@ -86,7 +86,6 @@ session_start();
                                     </select>
                                 </div>
                             </div>
-
                             <div class="form-group">                                
                                 <input type="text" name="endereco_aluno" id="endereco_aluno" class="form-control" placeholder="Endereço">
                             </div>
@@ -98,9 +97,18 @@ session_start();
                                 <div class="col">
                                     <input type="text" name="estado_aluno" id="estado_aluno" class="form-control" placeholder="Estado">
                                 </div>
+                            </div><br>                         
+
+                            <div class="form-group">   
+                            <label class="text-info">Defina sua senha:</label>
+                                <input type="text" name="email_aluno" id="email_aluno" class="form-control" placeholder="Email">
+                            </div>                            
+                                <div>
+                                    <input type="password" name="senha_aluno" id="senha_aluno" class="form-control" placeholder="Senha">
+                                </div>                            
                             </div>
                             <br>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >________________________________________</h3>
                             <h4 class="text-left text-info">O que você busca?</h4>
 
                             <div class="form-group">
@@ -114,7 +122,7 @@ session_start();
                                     <label class="form-check-label" for="personal_trainer_busca" style="color: white;">Personal Trainer</label>
                                 </div>
                             </div><br>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >________________________________________</h3>
                             <h4 class="text-left text-info">Qual o seu objetivo?</h4>
 
                             <div class="form-row">
@@ -147,7 +155,7 @@ session_start();
                                     </div>
                                 </div>
                             </div><br>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >________________________________________</h3>
                             <h4 class="text-left text-info">Conte mais sobre você.</h4>
 
                             <div class="form-group row">
@@ -182,7 +190,7 @@ session_start();
                                         </div>                              
                                 </div><br>                             
                             </div>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >________________________________________</h3>
 
                             <div class="d-flex justify-content-center">
                                 <button type="button" class="btn btn-secondary">Termo de Uso</button>

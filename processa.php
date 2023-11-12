@@ -23,10 +23,12 @@ $Atividade_fisica=filter_input(INPUT_POST, 'atriv_fisic', FILTER_SANITIZE_STRING
 $Atividade_fisica2=filter_input(INPUT_POST, 'atriv_fisic2', FILTER_SANITIZE_STRING);
 $Quant_ativ=filter_input(INPUT_POST, 'qtd_ativ', FILTER_SANITIZE_STRING);
 $Probl_saude=filter_input(INPUT_POST, 'prob_saude', FILTER_SANITIZE_STRING);
+$emailAluno=filter_input(INPUT_POST, 'email_aluno', FILTER_SANITIZE_STRING);
+$senhaAluno=filter_input(INPUT_POST, 'senha_aluno', FILTER_SANITIZE_STRING);
 
 
 
-$result_alunos = "INSERT INTO alunos (nome, cpf, idade, sexo, endereco, cidade, estado, busca_nutri, busca_personal, emagrecimento, massa, condionamento, saude, peso, altura, ativ_sim, ativ_nao, quant_ativ, prob_saude) VALUES ('$nomeAluno','$cpfAluno','$idadeAluno','$sexoAluno','$enderecoAluno','$cidadeAluno','$estadoAluno','$opcaoBusca_alun','$opcaoBusca2_alun','$emagrecimento','$ganho_de_massa','$condiciona','$saude','$Peso','$Altura','$Atividade_fisica','$Atividade_fisica2','$Quant_ativ','$Probl_saude')";
+$result_alunos = "INSERT INTO alunos (nome, cpf, idade, sexo, endereco, cidade, estado, busca_nutri, busca_personal, emagrecimento, massa, condionamento, saude, peso, altura, ativ_sim, ativ_nao, quant_ativ, prob_saude, email_aluno, senha_aluno) VALUES ('$nomeAluno','$cpfAluno','$idadeAluno','$sexoAluno','$enderecoAluno','$cidadeAluno','$estadoAluno','$opcaoBusca_alun','$opcaoBusca2_alun','$emagrecimento','$ganho_de_massa','$condiciona','$saude','$Peso','$Altura','$Atividade_fisica','$Atividade_fisica2','$Quant_ativ','$Probl_saude','$emailAluno','$senhaAluno')";
 
 $resultado_alunos = mysqli_query($conn, $result_alunos);
 
@@ -35,7 +37,7 @@ if (mysqli_insert_id($conn)){
     header("Location: cadastro_aluno.php");
    
 }else{
-    $_SESSION['msg']="<h2 style='color:green;' >Cadastrado com sucesso!</h2>";
+    $_SESSION['msg']="<h2 style='color:green;' >Não cadastrado!</h2>";
     header("Location: cadastro_aluno.php");
 }
 
