@@ -44,9 +44,9 @@ session_start();
 <body>
 
 <div id="logo">
-    <img src="/Imagens/icons8-barra-de-peso-100.png" alt="logo">    
+<img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">   
 </div>
-<h3 class="text-center text-white pt-5" style="margin-top: -75px;">______________________________________________</h3>
+<h3 class="text-center text-white pt-5" style="margin-top: -75px;">____________________________________________</h3>
 <br>
 
     <div id="login">
@@ -72,8 +72,8 @@ session_start();
                                 <div>
                                     <select name="opcao_prof" id="opcao_prof" class="form-control">  
                                     <option value="ops">Escolha uma pção</option>                                      
-                                        <option value="nutri">Nutricionista</option>
-                                        <option value="psronal">Personal Trainer</option>
+                                        <option value="Nutricionista">Nutricionista</option>
+                                        <option value="Personal treiner">Personal Trainer</option>
                                     </select>
                                 </div>
                             </div><br>
@@ -125,7 +125,7 @@ session_start();
                             </div>                          
 
                             <br>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >____________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_______________________________________</h3>
                             <h4 class="text-left text-info">Formação</h4>
 
 
@@ -168,7 +168,7 @@ session_start();
                                 <textarea name="observacoes_prof" id="observacoes_prof" class="form-control" rows="4" placeholder="Conte mais sobre você."></textarea>
                             </div>
 
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >____________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >__________________________________________</h3>
                             <h4 class="text-left text-info">Atendimento on-line?</h4>
 
                             <div class="form-group">
@@ -183,7 +183,7 @@ session_start();
                                 </div>
             
                             
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >____________________________________________</h3>
+                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >__________________________________________</h3>
                             <label class="text-info">As informações por mim prestadas são verdadeiras  </label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="check_info" id="check_info" value="check_info">
@@ -201,7 +201,9 @@ session_start();
                                 </div><br><br>
 
 
-                                <input type="submit" value="Enviar Formulário">
+                                <div style="text-align: center;">
+                                    <input type="submit" value="Enviar Formulário">
+                                </div>
                         </form>
                     </div>
                 </div>

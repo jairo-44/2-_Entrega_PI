@@ -28,8 +28,9 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
 
 
         }else{
-            echo "Falha ao logar! Email ou senha inválidos!";
+            echo "<h6 style='color:yellow;'>Email ou senha inválidos!</h6>";
         }
+       
 
     }
 ?>
@@ -70,7 +71,7 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
                            
         }
 
-        h4, h5 {
+        h4, h5, h6 {
             text-align: center;
             color: red;"
         }
@@ -81,7 +82,7 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
 <body>
 
 <div id="logo">
-    <img src="/Imagens/icons8-barra-de-peso-100.png" alt="logo">    
+<img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo"> 
 </div>
 <h3 class="text-center text-white pt-5" style="margin-top: -75px;">____________________________________</h3>
 <br><br>
@@ -109,8 +110,7 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
                                 }
                             ?>
 
-
-
+                            
                             <div class="form-group">
                                 <label for="username" class="text-info">Email:</label><br>
                                 <input type="text" name="username" id="username" class="form-control">
@@ -134,9 +134,9 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
                             </div>
                             <br><br>
                             <div id="redes">
-                                <img src="/Imagens/icons8-whatsapp-48.png" alt="logo">
-                                <img src="/Imagens/icons8-instagram-94.png" alt="logo">
-                                <img src="/Imagens/icons8-facebook-48.png" alt="logo">
+                            <img src="<?php echo 'Imagens/icons8-whatsapp-48.png' ?>" alt="logo">
+                            <img src="<?php echo 'Imagens/icons8-instagram-94.png' ?>" alt="logo">
+                            <img src="<?php echo 'Imagens/icons8-facebook-48.png' ?>" alt="logo">                            
                             </div>
                             
                         </form>

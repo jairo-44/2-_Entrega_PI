@@ -45,7 +45,7 @@
 <body>
 
 <div id="logo">
-<img src="/Imagens/icons8-barra-de-peso-100.png" alt="logo">
+<img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">
 </div>
 <h3 class="text-center text-white pt-5" style="margin-top: -75px;">________________________________________</h3>
 <br><br>

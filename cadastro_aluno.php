@@ -44,7 +44,7 @@ session_start();
 <body>
 
 <div id="logo">
-<img src="/Imagens/icons8-barra-de-peso-100.png" alt="logo">
+<img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">
 </div>
 <h3 class="text-center text-white pt-5" style="margin-top: -75px;">________________________________________</h3>
 <br><br>
@@ -80,9 +80,9 @@ session_start();
                                 </div>
                                 <div class="col">
                                     <select name="sexo_aluno" id="sexo_aluno" class="form-control">
-                                        <option value="masculino">Sexo</option>
-                                        <option value="masculino">Masculino</option>
-                                        <option value="feminino">Feminino</option>
+                                        <option value="Sexo">Sexo</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
                                     </select>
                                 </div>
                             </div>
@@ -113,13 +113,12 @@ session_start();
 
                             <div class="form-group">
                                 <label class="text-info">Escolha uma opção:</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="opcao_busca" id="opcao_busca" value="nutricionista_busca">
-                                    <label class="form-check-label" for="nutricionista_busca" style="color: white;">Nutricionista</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="opcao_busca2" id="opcao_busca2" value="personal_trainer">
-                                    <label class="form-check-label" for="personal_trainer_busca" style="color: white;">Personal Trainer</label>
+                                <div class="col">
+                                    <select name="opcao_busca" id="opcao_busca" class="form-control">
+                                        <option value="Escolha">Escolha</option>
+                                        <option value="Personal treiner">Personal treiner</option>
+                                        <option value="Nutricionista">Nutricionista</option>                                        
+                                    </select>
                                 </div>
                             </div><br>
                             <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >________________________________________</h3>
@@ -128,24 +127,15 @@ session_start();
                             <div class="form-row">
                                 <!-- Opções à esquerda -->
                                 <div class="col">
-                                    <div class="form-group">                                        
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="emagrecimento" id="emagrecimento" value="emagrecimento">
-                                            <label class="form-check-label" for="emagrecimento" style="color: white;">Emagrecimento</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="ganho_massa" id="ganho_massa" value="ganho_massa">
-                                            <label class="form-check-label" for="ganho_massa" style="color: white;">Ganho de massa muscular</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="condicionamento" id="condicionamento" value="condicionamento">
-                                            <label class="form-check-label" for="condicionamento" style="color: white;">Condicionamento físico</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="melhora_saude" id="melhora_saude" value="melhora_saude">
-                                            <label class="form-check-label" for="melhora_saude" style="color: white;">Melhora da saúde</label>
-                                        </div>
-                                    </div>
+                                <div class="col">
+                                    <select name="obj_aluno" id="obj_aluno" class="form-control">
+                                        <option value="escol">Escolha</option>
+                                        <option value="Emagrecimento">Emagrecimento</option>
+                                        <option value="Ganho de massa muscular">Ganho de massa muscular</option>
+                                        <option value="Condionamento físico">Concionamento físico</option>
+                                        <option value="Melhora da saúde">Melhora da saúde</option>
+                                    </select>
+                                </div>
                                 </div>
                             
                                 <!-- Observações à direita -->
@@ -165,24 +155,24 @@ session_start();
                                 <div class="col">
                                     <input type="text" name="altura" id="altura" class="form-control" placeholder="Altura">
                                 </div>
-                            </div>                        
+                            </div><br>                        
 
                             <div class="form-group">
                                 <label class="text-info">Já pratica atividade física?</label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="ativ_fisic" id="ativ_fisic" value="ativ_fisic">
-                                    <label class="form-check-label" for="ativ_fisic" style="color: white;">Sim</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="ativ_fisic2" id="ativ_fisic2" value="ativ_fisic2">
-                                    <label class="form-check-label" for="ativ_fisic2" style="color: white;">Não</label>
-                                </div>
+                                  <select name="prat_ativ_fisic" id="prat_ativ_fisic" class="form-control">
+                                        <option value="esc">Escolha</option>
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
+                                </div><br><br>    
                                 <div class="form-group">
-                                    <label class="text-info">Qunatas vezes na semana?</label>
+                                    <label class="text-info">Quantas vezes na semana?</label>
                                     <div class="form-check form-check-inline">
                                         <input type="number" name="qtd_ativ" id="qtd_ativ" class="form-control col-3">
                                     </div> 
                                     <br><br>
+
                                     <div class="form-group">
                                         <label class="text-info">Algum problema de  saúde?</label>
                                         <div class="form-check form-check-inline">
@@ -202,8 +192,9 @@ session_start();
                                     <label class="form-check-label" for="ativ_fisic" style="color: white;"></label>
                                 </div><br><br>
 
-
+                            <div style="text-align: center;">
                                 <input type="submit" value="Enviar Formulário">
+                            </div>
                         </form>
                     </div>
                 </div>
