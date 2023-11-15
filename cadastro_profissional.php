@@ -1,5 +1,33 @@
 <?php
 session_start();
+
+?>
+
+<?php
+
+if(isset($_FILES['certif1'])){
+    $arquivo=$_FILES['certif1'];
+
+    if ($arquivo['error'])
+        die ("Falha ao enviar o arquivo");
+        
+
+    $pasta="certificados_prof/";
+    $nomeArquivo=$arquivo['name'];
+    $novoNomeArquivo=uniqid();
+    $extensaoArq=strtolower(pathinfo($nomeArquivo, PATHINFO_EXTENSION));
+
+    if ($extensaoArq != 'jpg' && $extensaoArq != 'png')
+    die ("Aceitos somentes arquivos png e jpg.");
+
+    $finalizado = move_uploaded_file($arquivo["tmp_name"], $pasta . $novoNomeArquivo . "." . $extensaoArq);
+
+    if ($finalizado)
+        echo "<p> Arquivo enviado com sucesso</p>";
+    
+
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -122,50 +150,83 @@ session_start();
                                 <div>
                                     <input type="password" name="senha_prof" id="senha_prof" class="form-control" placeholder="Senha">
                                 </div>
-                            </div>                          
+                            </div><br>                       
+                        </form>
 
-                            <br>
+
+                        <form method="POST" enctype="multipart/form-data" action="">
+                            
                             <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_______________________________________</h3>
                             <h4 class="text-left text-info">Formação</h4>
 
 
+                            <div class="form-group row custom-margin">
+                                <div class="col-7">
+                                 <input type="text" name="form_academ" id="form_academ" class="form-control" placeholder="Formação">
+                                </div>
+                                    <div class="col-2">
+                                        <input name="certif1" type="file" class="form-control">
+                                    </div>
+                                <div class="col-2">
+                                    <button name= "upload1" type="submit" class="btn btn-primary">Anexar</button>
+                                </div>
+                                    
+                            </div>
+
+
+
                             <div class="form-group row">
-                            <div class="col-7">
-                                <input type="text" name="form_academ" id="form_academ" class="form-control" placeholder="Formação">
+                                <div class="col-7">
+                                    <input type="text" name="especializacao1" id="especializacao1" class="form-control" placeholder="Especializacão 1">
+                                </div>
+                                <div class="col-5">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input type="file" class="form-control">
+                                        </div>
+                                        <div class="col-4">
+                                            <button type="submit" class="btn btn-primary">Anexar</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <div class="col-7">
-                                <input type="text" name="especializacao1" id="especializacao1" class="form-control" placeholder="Especialização 1">
+                            <div class="form-group row">
+                                <div class="col-7">
+                                    <input type="text" name="especializacao2" id="especializacao2" class="form-control" placeholder="Especializacão 2">
+                                </div>
+                                <div class="col-5">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input type="file" class="form-control">
+                                        </div>
+                                        <div class="col-4">
+                                            <button type="submit" class="btn btn-primary">Anexar</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
+                                             
+                            <div class="form-group row">
+                                <div class="col-7">
+                                    <input type="text" name="especializacao3" id="especializacao3" class="form-control" placeholder="Especializacão 3">
+                                </div>
+                                <div class="col-5">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input type="file" class="form-control">
+                                        </div>
+                                        <div class="col-4">
+                                            <button type="submit" class="btn btn-primary">Anexar</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <div class="col-7">
-                                <input type="text" name="especializacao2" id="especializacao2" class="form-control" placeholder="Especialização 2">
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-7">
-                                <input type="text" name="especializacao3" id="especializacao3" class="form-control" placeholder="Especialização 3">
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-success">Anexar cópia do diploma</button>
-                            </div>
-                        </div>
-                            <div class="form-group">                                        
+                            <div class="form-group">    
+                                <div class="col-12">                                    
                                 <textarea name="observacoes_prof" id="observacoes_prof" class="form-control" rows="4" placeholder="Conte mais sobre você."></textarea>
+                                </div>
                             </div>
 
                             <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >__________________________________________</h3>
@@ -204,7 +265,7 @@ session_start();
                                 <div style="text-align: center;">
                                     <input type="submit" value="Enviar Formulário">
                                 </div>
-                        </form>
+                            </form>
                     </div>
                 </div>
             </div>

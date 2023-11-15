@@ -28,7 +28,7 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
 
 
         }else{
-            echo "<h6 style='color:yellow;'>Email ou senha inválidos!</h6>";
+            //echo "<h6 style='color:yellow;'>Email ou senha inválidos!</h6>";
         }
        
 
