@@ -64,6 +64,23 @@ include_once("conexao.php")
         color: white;
     }
 
+    .profile-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 100px; /* Ajuste o tamanho conforme necessário */
+        height: 100px; /* Ajuste o tamanho conforme necessário */
+        margin-right: 10px; /* Ajuste a margem conforme necessário */
+        object-fit: cover; /* Isso mantém a proporção da imagem */
+        border-radius: 50%; /* Isso cria uma borda circular (opcional) */
+    }
+
+    .profile-info {
+        flex-grow: 1; /* Isso faz com que a informação ocupe o espaço restante */
+    }
+
    
     
 
@@ -94,10 +111,20 @@ include_once("conexao.php")
     $resultado_profissionais = mysqli_query($conn, $result_prof);
 
     while($row_prof = mysqli_fetch_assoc($resultado_profissionais)){
-        echo "Nome:  " . $row_prof['nome_prof']. "<br>"; 
+        $caminho_imagem = 'Imagens/' . $row_prof['cpf_prof'] . '.jpg'; //na pasta imagem, o nome da foto deve ser o CPF do profissional cadastrado no BD
+        echo "<div class='profile-container'>";
+        echo "<img src='{$caminho_imagem}' alt='{$row_prof['nome_prof']} Foto' class='profile-image'>"; 
+        echo "<div class='profile-info'>";
+        echo "Nome:  " . $row_prof['nome_prof']. "<br>";         
         echo "Formação:  " . $row_prof['especialidade']. "<br>";
         echo "Atendimento Online:  " . $row_prof['opcao_atendimento'] . "<br>";
-        echo "<hr class='white-hr'>"; // Linha separadora com cor branca
+        echo "</div>";
+        
+        // Adicionar o link para a página de pagamento com os parâmetros necessários
+        echo "<a href='pagamento.html?nome={$row_prof['nome_prof']}&cpf={$row_prof['cpf_prof']}' class='add-button'>Adicionar</a>";
+        
+        echo "</div>";
+        echo "<hr class='white-hr'>";
     }
     ?>
 </div>
