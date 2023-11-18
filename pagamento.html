@@ -159,28 +159,29 @@
     <!-- pagamento -->
     <div class="section-container">
         <h2 class="section">Forma de Pagamento</h2>
-        <div class="pagamentos">
-            <table>
-                <tr>
-                    <td><input type="radio" name="cartao"></td>
-                    <td><p>Cartão</p></td>
-                    <td><img src="Imagens/visa-cartao.png" alt="Visa" class="icones-pequenos"></td>
-                    <td><img src="/Imagens/master-cartao.png" alt="Master" class="icones-pequenos"></td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="plano"></td>
-                    <td><p>Pix</p></td>
-                    <td><img src="/Imagens/pix-pag.png" alt="Master" class="icones-pequenos"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="boleto"></td>
-                    <td><p>Boleto</p></td>
-                    <td><img src="Imagens/boleto-pag.png" alt="Master" class="icones-pequenos"></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
+        <form>
+            <div class="pagamentos">
+                <table>
+                    <tr>
+                        <td><input type="radio" name="metodo_pagamento" id="cartao"></td>
+                        <td><label for="cartao" style="color: white;">Cartão</label></td>
+                        <td><img src="Imagens/visa-cartao.png" alt="Visa" class="icones-pequenos"></td>
+                        <td><img src="/Imagens/master-cartao.png" alt="Master" class="icones-pequenos"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="metodo_pagamento" id="pix"></td>
+                        <td><label for="pix" style="color: white;">Pix</label></td>
+                        <td><img src="/Imagens/pix-pag.png" alt="Pix" class="icones-pequenos"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="metodo_pagamento" id="boleto"></td>
+                        <td><label for="boleto" style="color: white;">Boleto</label></td>
+                        <td><img src="Imagens/boleto-pag.png" alt="Boleto" class="icones-pequenos"></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
         <br><br>
         <div class="btn1">
             <a href="" class="pagar-btn">Pagar</a>
