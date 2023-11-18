@@ -41,7 +41,7 @@ include_once("conexao.php")
 
         h2 {
             text-align: center;
-            color: red;"
+            color: red;
         }
 
         .white-text {
