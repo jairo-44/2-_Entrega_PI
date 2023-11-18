@@ -51,6 +51,20 @@ include_once("conexao.php")
     .white-hr {
         border-color: white;
     }
+
+    .custom-border {
+        border-bottom: 2px solid #30E691;
+    }
+
+    .custom-border2 {
+        border-top: 2px solid #30E691;
+    }      
+
+    .custom-text {
+        color: white;
+    }
+
+   
     
 
     </style>
@@ -61,12 +75,12 @@ include_once("conexao.php")
 <div id="logo">
 <img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">
 </div>
-<h3 class="text-center text-white pt-5" style="margin-top: -75px;">________________________________________</h3>
+<h4 class="text-center custom-text custom-border2" ></h4><br><br>
 <br><br>
 
 <h2 style='color:white;' >Seja bem-vindo a área do aluno!</h2><br><br>
 
-<h5 style='color:green;' >Estes são os prifissionais selecionados para você:</h5>
+<h5 style='color:white;' >Estes são os prifissionais selecionados para você:</h5><br><br>
 
 
 <div class="white-text">

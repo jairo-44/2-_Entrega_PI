@@ -66,6 +66,30 @@ if(isset($_FILES['certif1'])){
                
         }
 
+    
+        .custom-border {
+        border-bottom: 2px solid #30E691;
+    }
+
+    .custom-border2 {
+        border-top: 2px solid #30E691;
+    }
+      
+
+    .custom-text {
+        color: white;
+    }
+
+    .custom-text2 {
+        color: white;
+    }
+
+    .custom-margin {
+        margin-bottom: 10px;
+    }
+
+   
+
     </style>
     
 </head>     
@@ -74,7 +98,7 @@ if(isset($_FILES['certif1'])){
 <div id="logo">
 <img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">   
 </div>
-<h3 class="text-center text-white pt-5" style="margin-top: -75px;">____________________________________________</h3>
+
 <br>
 
     <div id="login">
@@ -85,7 +109,7 @@ if(isset($_FILES['certif1'])){
                     <div id="login-box" class="col-md-12">
 
                        <form method="POST" action="processa_prof.php">
-                            <h3 class="text-center text-info">CADASTRO</h3>
+                            <h3 class="text-center custom-text custom-border2">CADASTRO</h3>
                             <br>
                             <?php
                             if (isset($_SESSION['msg']))
@@ -93,10 +117,10 @@ if(isset($_FILES['certif1'])){
                                 unset($_SESSION['msg'] );
                             ?>
 
-                            <h4 class="text-center text-info">Profissional</h4>
+                            <h4 class="text-center custom-text">Profissional</h4>
 
                             <div>
-                                <label class="text-info">Qual profissional buscar?</label>
+                                <label class="text-center custom-text">Qual profissional buscar?</label>
                                 <div>
                                     <select name="opcao_prof" id="opcao_prof" class="form-control">  
                                     <option value="ops">Escolha uma pção</option>                                      
@@ -138,12 +162,12 @@ if(isset($_FILES['certif1'])){
                                     <input type="text" name="n_conselho" id="n_conselho" class="form-control" placeholder="Nº Conselho">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="especialidade" id="especialidade" class="form-control" placeholder="Especialidade">
+                                    <input type="text" name="especialidade" id="especialidade" class="form-control" placeholder="Formação">
                                 </div>
                             </div>    
                             
                             <div class="form-group">
-                                <label class="text-info">Defina sua senha:</label>
+                                <label class="text-center custom-text">Defina sua senha:</label>
                                 <div class="mb-3">
                                     <input type="text" name="email_prof" id="email_prof" class="form-control" placeholder="Email">
                                 </div>
@@ -154,83 +178,81 @@ if(isset($_FILES['certif1'])){
                         </form>
 
 
-                        <form method="POST" enctype="multipart/form-data" action="">
+                        <form method="POST" enctype="multipart/form-data" action="">                          
                             
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >_______________________________________</h3>
-                            <h4 class="text-left text-info">Formação</h4>
+                        <h5 class="text-left custom-text custom-border">Formação</h5>
+                        <p class="text-left custom-text2 ">(clique na seta e escolha a imagem)</p>
 
-
-                            <div class="form-group row custom-margin">
-                                <div class="col-7">
-                                 <input type="text" name="form_academ" id="form_academ" class="form-control" placeholder="Formação">
-                                </div>
-                                    <div class="col-2">
-                                        <input name="certif1" type="file" class="form-control">
-                                    </div>
-                                <div class="col-2">
-                                    <button name= "upload1" type="submit" class="btn btn-primary">Anexar</button>
-                                </div>
-                                    
+                        <div class="form-group row custom-margin">
+                            <div class="col-7">
+                                <input type="text" name="form_academ" id="form_academ" class="form-control" placeholder="Formação">
                             </div>
-
-
-
-                            <div class="form-group row">
-                                <div class="col-7">
-                                    <input type="text" name="especializacao1" id="especializacao1" class="form-control" placeholder="Especializacão 1">
-                                </div>
-                                <div class="col-5">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <input type="file" class="form-control">
-                                        </div>
-                                        <div class="col-4">
-                                            <button type="submit" class="btn btn-primary">Anexar</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col-2">
+                            <label for="fileInput" class="form-control">
+                                <span>&#9650;</span>
+                                <input type="file" id="fileInput" style="display: none;">
+                            </label>
                             </div>
+                            <div class="col-2">
+                                <button name="upload1" type="submit" class="btn btn-primary">Anexar</button>
+                            </div>                            
+                        </div><br>
 
-                            <div class="form-group row">
-                                <div class="col-7">
-                                    <input type="text" name="especializacao2" id="especializacao2" class="form-control" placeholder="Especializacão 2">
-                                </div>
-                                <div class="col-5">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <input type="file" class="form-control">
-                                        </div>
-                                        <div class="col-4">
-                                            <button type="submit" class="btn btn-primary">Anexar</button>
-                                        </div>
-                                    </div>
-                                </div>
+                        <!-- Repetir o mesmo padrão para as especializações -->
+                        <h5 class="text-left custom-text custom-border">Especializações</h5>
+
+                        <div class="form-group row custom-margin">
+                            <div class="col-7">
+                                <input type="text" name="especializacao1" id="especializacao1" class="form-control" placeholder="Especialização 1">
                             </div>
-                                             
-                            <div class="form-group row">
-                                <div class="col-7">
-                                    <input type="text" name="especializacao3" id="especializacao3" class="form-control" placeholder="Especializacão 3">
-                                </div>
-                                <div class="col-5">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <input type="file" class="form-control">
-                                        </div>
-                                        <div class="col-4">
-                                            <button type="submit" class="btn btn-primary">Anexar</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col-2">
+                            <label for="fileInput" class="form-control">
+                                <span>&#9650;</span>
+                                <input type="file" id="fileInput" style="display: none;">
+                            </label>
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-primary">Anexar</button>
                             </div>
                         </div>
-                            <div class="form-group">    
-                                <div class="col-12">                                    
-                                <textarea name="observacoes_prof" id="observacoes_prof" class="form-control" rows="4" placeholder="Conte mais sobre você."></textarea>
-                                </div>
-                            </div>
 
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >__________________________________________</h3>
-                            <h4 class="text-left text-info">Atendimento on-line?</h4>
+                        <div class="form-group row custom-margin">
+                            <div class="col-7">
+                                <input type="text" name="especializacao2" id="especializacao2" class="form-control" placeholder="Especialização 2">
+                            </div>
+                            <div class="col-2">
+                            <label for="fileInput" class="form-control">
+                                <span>&#9650;</span>
+                                <input type="file" id="fileInput" style="display: none;">
+                            </label>
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-primary">Anexar</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group row custom-margin">
+                            <div class="col-7">
+                                <input type="text" name="especializacao3" id="especializacao3" class="form-control" placeholder="Especialização 3">
+                            </div>
+                            <div class="col-2">
+                            <label for="fileInput" class="form-control">
+                                <span>&#9650;</span>
+                                <input type="file" id="fileInput" style="display: none;">
+                            </label>
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-primary">Anexar</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-12">
+                                <textarea name="observacoes_prof" id="observacoes_prof" class="form-control" rows="4" placeholder="Conte mais sobre você."></textarea>
+                            </div>
+                        </div><br>
+                            
+                            <h5 class="text-left custom-text custom-border">Atendimento on-line?</h5>
 
                             <div class="form-group">
                                 
@@ -241,11 +263,11 @@ if(isset($_FILES['certif1'])){
                                         <option value="nao">Não</option>
                                     </select>
                                 </div>
-                                </div>
+                                </div><br>
             
                             
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >__________________________________________</h3>
-                            <label class="text-info">As informações por mim prestadas são verdadeiras  </label>
+                            <h5 class="text-left custom-text custom-border">Termos de uso e contrato</h5>
+                            <label class="custom-text">As informações por mim prestadas são verdadeiras  </label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="check_info" id="check_info" value="check_info">
                                     <label class="form-check-label" for="check_info" style="color: white;"></label>
@@ -255,7 +277,7 @@ if(isset($_FILES['certif1'])){
                                 <button type="button" class="btn btn-secondary">Termo de Uso</button>
                             </div><br>
 
-                            <label class="text-info">Li e concordo com os termos de uso  </label>
+                            <label class="custom-text">Li e concordo com os termos de uso  </label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="check_info2" id="check_info2" value="check_info2">
                                     <label class="form-check-label" for="check_info2" style="color: white;"></label>

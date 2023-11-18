@@ -76,6 +76,18 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
             color: red;"
         }
 
+        .custom-border {
+        border-bottom: 2px solid #30E691;
+    }
+
+    .custom-border2 {
+        border-top: 2px solid #30E691;
+    }      
+
+    .custom-text {
+        color: white;
+    }
+
     </style>
     
 </head>
@@ -84,8 +96,8 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
 <div id="logo">
 <img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo"> 
 </div>
-<h3 class="text-center text-white pt-5" style="margin-top: -75px;">____________________________________</h3>
-<br><br>
+
+
 
     <div id="login">
        
@@ -95,9 +107,11 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
                     <div id="login-box" class="col-md-12">
 
                         <form id="login-form" class="form" action="" method="POST">
-                            <h3 class="text-center text-info">Já faz parte da nossa corrente?</h3>
+                        <h4 class="text-center custom-text custom-border2" ></h4><br><br>
+                                                    
+                        <h4 class="text-center custom-text">Já faz parte da nossa corrente?</h4><br>
                             <br><br>
-                            <h4 class="text-center text-info">Entre</h4>
+                            <h4 class="text-center custom-text">Entre</h4>
                             
                             <?php
                             
@@ -112,31 +126,36 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
 
                             
                             <div class="form-group">
-                                <label for="username" class="text-info">Email:</label><br>
+                                <label for="username" class="custom-text">Email:</label><br>
                                 <input type="text" name="username" id="username" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="senha" class="text-info">Senha:</label><br>
+                                <label for="senha" class="custom-text">Senha:</label><br>
                                 <input type="password" name="senha" id="senha" class="form-control">
                             </div>
                             <div id="btn_entrar">
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
                             </div>
                             <br><br>
-                            <h3 class="text-center text-info">Ainda não faz parte?</h3><br>
-                            <h3 class="text-center text-info">FIT-Connect</h3>
-                            <p class="text-center text-info">Conectando a necessidade por saúde e bem-estar a quem entende do assunto. Faça seu cadastro e entre para a corrente do bem.</p>
+                            <h3 class="text-center custom-text">Ainda não faz parte?</h3><br>
+                            <h3 class="text-center custom-text">FIT-Connect</h3>
+                            <p class="text-center custom-text">Conectando a necessidade por saúde e bem-estar a quem entende do assunto. Faça seu cadastro e entre para a corrente do bem.</p>
                             <br>
-                            <p class="text-center text-info">Clique aqui e saiba mais sobre a gente.</p>
+                            <p class="text-center custom-text">Clique aqui e saiba mais sobre a gente.</p>
                             <br>
                             <div id="register-link" class="text-right">
-                                <h4 class="text-center text-info">Cadastra-se aqui.</h4>
+                                <h4 class="text-center custom-text">Cadastra-se aqui.</h4>
                             </div>
                             <br><br>
                             <div id="redes">
+                            <a href="https://www.whatsapp.com">
                             <img src="<?php echo 'Imagens/icons8-whatsapp-48.png' ?>" alt="logo">
+                            </a>
+                            
                             <img src="<?php echo 'Imagens/icons8-instagram-94.png' ?>" alt="logo">
-                            <img src="<?php echo 'Imagens/icons8-facebook-48.png' ?>" alt="logo">                            
+                            <a href="https://www.facebook.com">
+                            <img src="<?php echo 'Imagens/icons8-facebook-48.png' ?>" alt="logo">  
+                            </a>                          
                             </div>
                             
                         </form>

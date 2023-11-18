@@ -16,10 +16,12 @@ session_start();
     <style>
         body{background-color: rgb(13, 1, 24);
                 margin: 20px;
-                padding: 8px;
-                
+                padding: 8px;               
                 
         }
+
+       
+
         #btn_entrar{
             display: flex;
             justify-content: center;
@@ -37,6 +39,17 @@ session_start();
             height: 150px;            
                
         }
+        .custom-border {
+        border-bottom: 2px solid #30E691;
+    }
+
+    .custom-border2 {
+        border-top: 2px solid #30E691;
+    }      
+
+    .custom-text {
+        color: white;
+    }
 
     </style>
     
@@ -46,8 +59,8 @@ session_start();
 <div id="logo">
 <img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">
 </div>
-<h3 class="text-center text-white pt-5" style="margin-top: -75px;">________________________________________</h3>
-<br><br>
+
+
 
     <div id="login">
         
@@ -56,10 +69,14 @@ session_start();
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                     <form method="POST" action="processa.php">
-                            <h3 class="text-center text-info">CADASTRO</h3>
+                        
+                            <h3 class="text-center custom-text custom-border2">CADASTRO</h3>
+                                                   
+                            
+                            
                             <br>
 
-                            <h4 class="text-center text-info">Aluno / Paciente</h4><br>
+                            <h4 class="text-center custom-text">Aluno / Paciente</h4><br>
                             <?php
                             if (isset($_SESSION['msg']))
                                 echo $_SESSION['msg'];
@@ -100,7 +117,7 @@ session_start();
                             </div><br>                         
 
                             <div class="form-group">   
-                            <label class="text-info">Defina sua senha:</label>
+                            <label class="custom-text">Defina sua senha:</label>
                                 <input type="text" name="email_aluno" id="email_aluno" class="form-control" placeholder="Email">
                             </div>                            
                                 <div>
@@ -108,11 +125,11 @@ session_start();
                                 </div>                            
                             </div>
                             <br>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >________________________________________</h3>
-                            <h4 class="text-left text-info">O que você busca?</h4>
+                            
+                            <h5 class="text-left custom-text custom-border">O que você busca?</h5>
 
                             <div class="form-group">
-                                <label class="text-info">Escolha uma opção:</label>
+                                <label class="custom-text">Escolha uma opção:</label>
                                 <div class="col">
                                     <select name="opcao_busca" id="opcao_busca" class="form-control">
                                         <option value="Escolha">Escolha</option>
@@ -121,8 +138,7 @@ session_start();
                                     </select>
                                 </div>
                             </div><br>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >________________________________________</h3>
-                            <h4 class="text-left text-info">Qual o seu objetivo?</h4>
+                            <h5 class="text-left custom-text custom-border">Qual seu objetivo?</h5>
 
                             <div class="form-row">
                                 <!-- Opções à esquerda -->
@@ -145,8 +161,7 @@ session_start();
                                     </div>
                                 </div>
                             </div><br>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >________________________________________</h3>
-                            <h4 class="text-left text-info">Conte mais sobre você.</h4>
+                            <h5 class="text-left custom-text custom-border">Conte mais sobre você.</h5>
 
                             <div class="form-group row">
                                 <div class="col">
@@ -158,7 +173,7 @@ session_start();
                             </div><br>                        
 
                             <div class="form-group">
-                                <label class="text-info">Já pratica atividade física?</label>
+                                <label class="custom-text">Já pratica atividade física?</label>
                                 <div class="form-check form-check-inline">
                                   <select name="prat_ativ_fisic" id="prat_ativ_fisic" class="form-control">
                                         <option value="esc">Escolha</option>
@@ -167,26 +182,26 @@ session_start();
                                     </select>
                                 </div><br><br>    
                                 <div class="form-group">
-                                    <label class="text-info">Quantas vezes na semana?</label>
+                                    <label class="custom-text">Quantas vezes na semana?</label>
                                     <div class="form-check form-check-inline">
                                         <input type="number" name="qtd_ativ" id="qtd_ativ" class="form-control col-3">
                                     </div> 
                                     <br><br>
 
                                     <div class="form-group">
-                                        <label class="text-info">Algum problema de  saúde?</label>
+                                        <label class="custom-text">Algum problema de  saúde?</label>
                                         <div class="form-check form-check-inline">
                                             <input type="text" name="prob_saude" id="prob_saude" class="form-control col-50" placeholder="Qual?">
                                         </div>                              
                                 </div><br>                             
                             </div>
-                            <h3 class="text-center text-white pt-5" style="margin-top: -75px;" >________________________________________</h3>
+                            <h5 class="text-left custom-text custom-border">Termos de uso e contrato</h5>
 
                             <div class="d-flex justify-content-center">
                                 <button type="button" class="btn btn-secondary">Termo de Uso</button>
                             </div><br>
 
-                            <label class="text-info">Li e concordo com os termos de uso  </label>
+                            <label class="custom-text">Li e concordo com os termos de uso  </label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="ativ_fisic" id="ativ_fisic" value="ativ_fisic">
                                     <label class="form-check-label" for="ativ_fisic" style="color: white;"></label>
