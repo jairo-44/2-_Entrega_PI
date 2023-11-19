@@ -12,10 +12,10 @@ $cidadeProfissional=filter_input(INPUT_POST, 'cidade_prof', FILTER_SANITIZE_STRI
 $estadoProfissional=filter_input(INPUT_POST, 'estado_prof', FILTER_SANITIZE_STRING);
 $conselho_prof=filter_input(INPUT_POST, 'n_conselho', FILTER_SANITIZE_STRING);
 $especialidade_prof=filter_input(INPUT_POST, 'especialidade', FILTER_SANITIZE_STRING);
-$especializacao1=filter_input(INPUT_POST, 'espe1', FILTER_SANITIZE_STRING);
-$especializacao2=filter_input(INPUT_POST, 'espe2', FILTER_SANITIZE_STRING);
-$especializacao3=filter_input(INPUT_POST, 'espe3', FILTER_SANITIZE_STRING);
-$especializacao4=filter_input(INPUT_POST, 'espe4', FILTER_SANITIZE_STRING);
+$especializacao1=filter_input(INPUT_POST, 'form_academ', FILTER_SANITIZE_STRING);
+$especializacao2=filter_input(INPUT_POST, 'especializacao1', FILTER_SANITIZE_STRING);
+$especializacao3=filter_input(INPUT_POST, 'especializacao2', FILTER_SANITIZE_STRING);
+$especializacao4=filter_input(INPUT_POST, 'especializacao3', FILTER_SANITIZE_STRING);
 $obsProf=filter_input(INPUT_POST, 'observacoes_prof', FILTER_SANITIZE_STRING);
 $op_atend=filter_input(INPUT_POST, 'opcao_atend', FILTER_SANITIZE_STRING);
 $emailProf=filter_input(INPUT_POST, 'email_prof', FILTER_SANITIZE_STRING);
@@ -30,7 +30,7 @@ $result_prof = "INSERT INTO profissional (opcao_prof, nome_prof, cpf_prof, sexo_
 $resultado_profi = mysqli_query($conn, $result_prof);
 
 if (mysqli_insert_id($conn)){
-    $_SESSION['msg']="<h2 style='color:green;' >Cadastrado com sucesso!</h2>";
+    $_SESSION['msg']="<h2 style='color:green;'>Cadastrado com sucesso!</h2>";
     header("Location: cadastro_profissional.php");
    
 }else{

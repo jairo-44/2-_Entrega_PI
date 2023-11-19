@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -51,15 +50,29 @@ session_start();
         color: white;
     }
 
+    #logo {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        #logo img {
+            margin-right: 45px;
+        }
+        .logo-text {            
+            color: #FFF;
+            padding-right: 80px;
+            margin-left: 45px;
+            
+        }
+
     </style>
     
 </head>     
 <body>
-
 <div id="logo">
-<img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">
+<img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">   
+<h2 class="logo-text">Cadastro</h2>  
 </div>
-
 
 
     <div id="login">
@@ -70,7 +83,7 @@ session_start();
                     <div id="login-box" class="col-md-12">
                     <form method="POST" action="processa.php">
                         
-                            <h3 class="text-center custom-text custom-border2">CADASTRO</h3>
+                            <h3 class="text-center custom-text custom-border2"></h3>
                                                    
                             
                             

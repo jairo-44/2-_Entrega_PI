@@ -88,13 +88,24 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
         color: white;
     }
 
+    #logo {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        #logo img {
+            margin-right: 0px;
+        }
+        
+
     </style>
     
 </head>
 <body>
 
 <div id="logo">
-<img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo"> 
+<img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">   
+  
 </div>
 
 

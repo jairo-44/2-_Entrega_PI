@@ -11,7 +11,7 @@ include_once("conexao.php")
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
     <title>Área do aluno</title>
 
     <style>
@@ -41,7 +41,7 @@ include_once("conexao.php")
 
         h2 {
             text-align: center;
-            color: red;"
+            color: red;
         }
 
         .white-text {
@@ -70,34 +70,46 @@ include_once("conexao.php")
     }
 
     .profile-image {
-        width: 100px; /* Ajuste o tamanho conforme necessário */
-        height: 100px; /* Ajuste o tamanho conforme necessário */
-        margin-right: 10px; /* Ajuste a margem conforme necessário */
-        object-fit: cover; /* Isso mantém a proporção da imagem */
-        border-radius: 50%; /* Isso cria uma borda circular (opcional) */
+        width: 100px; 
+        height: 100px; 
+        margin-right: 10px; 
+        object-fit: cover; 
+        border-radius: 50%; 
     }
 
     .profile-info {
-        flex-grow: 1; /* Isso faz com que a informação ocupe o espaço restante */
+        flex-grow: 1; 
     }
 
-   
-    
+    #logo {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        #logo img {
+            margin-right: 45px;
+        }
+        .logo-text {            
+            color: #FFF;
+            padding-right: 80px;
+            margin-left: 45px;
+            
+        }     
 
     </style>
     
 </head>     
 <body>
+    <div id="logo">
+    <img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">   
+    <h2 class="logo-text">Área do aluno</h2>  
+    </div>
+        <h4 class="text-center custom-text custom-border2" ></h4><br><br>
+        <br><br>
 
-<div id="logo">
-<img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">
-</div>
-<h4 class="text-center custom-text custom-border2" ></h4><br><br>
-<br><br>
+        <h2 style='color:white;' >Seja bem-vindo a área do aluno!</h2><br><br>
 
-<h2 style='color:white;' >Seja bem-vindo a área do aluno!</h2><br><br>
-
-<h5 style='color:white;' >Estes são os prifissionais selecionados para você:</h5><br><br>
+        <h5 style='color:white;' >Estes são os prifissionais selecionados para você:</h5><br><br>
 
 
 <div class="white-text">

@@ -1,35 +1,6 @@
 <?php
 session_start();
-
 ?>
-
-<?php
-
-if(isset($_FILES['certif1'])){
-    $arquivo=$_FILES['certif1'];
-
-    if ($arquivo['error'])
-        die ("Falha ao enviar o arquivo");
-        
-
-    $pasta="certificados_prof/";
-    $nomeArquivo=$arquivo['name'];
-    $novoNomeArquivo=uniqid();
-    $extensaoArq=strtolower(pathinfo($nomeArquivo, PATHINFO_EXTENSION));
-
-    if ($extensaoArq != 'jpg' && $extensaoArq != 'png')
-    die ("Aceitos somentes arquivos png e jpg.");
-
-    $finalizado = move_uploaded_file($arquivo["tmp_name"], $pasta . $novoNomeArquivo . "." . $extensaoArq);
-
-    if ($finalizado)
-        echo "<p> Arquivo enviado com sucesso</p>";
-    
-
-
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -88,7 +59,20 @@ if(isset($_FILES['certif1'])){
         margin-bottom: 10px;
     }
 
-   
+    #logo {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        #logo img {
+            margin-right: 45px;
+        }
+        .logo-text {            
+            color: #FFF;
+            padding-right: 80px;
+            margin-left: 45px;
+            
+        }
 
     </style>
     
@@ -97,9 +81,8 @@ if(isset($_FILES['certif1'])){
 
 <div id="logo">
 <img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">   
+<h2 class="logo-text">Cadastro</h2>  
 </div>
-
-<br>
 
     <div id="login">
         
@@ -109,7 +92,10 @@ if(isset($_FILES['certif1'])){
                     <div id="login-box" class="col-md-12">
 
                        <form method="POST" action="processa_prof.php">
-                            <h3 class="text-center custom-text custom-border2">CADASTRO</h3>
+                            <h3 class="text-center custom-text custom-border2"></h3>
+                            
+
+                            <h4 class="text-center custom-text">Profissional</h4><br>
                             <br>
                             <?php
                             if (isset($_SESSION['msg']))
@@ -117,10 +103,8 @@ if(isset($_FILES['certif1'])){
                                 unset($_SESSION['msg'] );
                             ?>
 
-                            <h4 class="text-center custom-text">Profissional</h4>
-
                             <div>
-                                <label class="text-center custom-text">Qual profissional buscar?</label>
+                                <label class="text-center custom-text">Qual sua área?</label>
                                 <div>
                                     <select name="opcao_prof" id="opcao_prof" class="form-control">  
                                     <option value="ops">Escolha uma pção</option>                                      
@@ -178,7 +162,7 @@ if(isset($_FILES['certif1'])){
                         </form>
 
 
-                        <form method="POST" enctype="multipart/form-data" action="">                          
+                        <form>                          
                             
                         <h5 class="text-left custom-text custom-border">Formação</h5>
                         <p class="text-left custom-text2 ">(clique na seta e escolha a imagem)</p>
@@ -258,7 +242,7 @@ if(isset($_FILES['certif1'])){
                                 
                             <div>
                                     <select name="opcao_atend" id="opcao_atend" class="form-control">  
-                                    <option value="opcao_atend" >Escolha uma pção</option>                                      
+                                    <option value="opcao_at" >Escolha uma pção</option>                                      
                                         <option value="sim">Sim</option>
                                         <option value="nao">Não</option>
                                     </select>
