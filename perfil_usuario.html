@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Perfil do Usuário</title>
+    
+    <style>
+        body {
+            background-color: rgb(13, 1, 24);
+            margin: 20px;
+            padding: 8px;
+        }
+        #btn_entrar {
+            display: flex;
+            justify-content: center;
+        }
+        #redes {
+            display: flex;
+            justify-content: center;
+            height: 50px;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .foto-logo {
+            padding-left: 150px;
+        }
+        .foto-usuario {
+            width: 100px;
+            display: flex;
+            margin-right: 240px;
+            border-radius: 50%;
+        }
+        .logo-text {
+            display: flex;
+            align-items: center;
+            color: #FFF;
+            padding-right: 230px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-container {
+            border: 3px solid #30E691;
+            height: 130px;
+            margin-right: 30px;
+        }
+        .image-container img {
+            height: 124px;
+            width: auto;
+        }
+        .text-container {
+            color: #FFF;
+            max-width: 400px;
+        }
+        .section-container {
+            max-width: 1050px;
+        }
+        .section {
+            color: #FFF;
+            margin-left: 150px;
+            border-bottom: 4px solid #30E691;
+        }
+        .tabela-dados {
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+}
+        .dados {
+            padding-bottom: 30px;
+            padding-left: 55px;
+        }
+        .icones-pequenos {
+            max-width: 50px;
+            margin: 10px;
+        }
+        .garficos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn1 {
+            display: flex;
+            justify-content: center;
+        }
+        .grafico-btn {
+            border: none;
+            border-radius: 5px;
+            background-color: #30E691;
+            cursor: pointer;
+            padding: 8px 16px;
+        }
+        a, a:hover {
+            text-decoration: none;
+            color: #FFF;
+        }
+        p {
+            margin-top: 1rem !important;
+            margin-right: 30px;
+            text-align: center;
+        }
+    </style> 
+</head>
+<body>
+    <!-- cabeçalho -->
+    <div id="logo">
+        <img src="/Imagens/icons8-barra-de-peso-100.png" alt="logo" class="foto-logo">
+        <h2 class="logo-text">Perfil do Usuário</h2>   
+    </div>
+    <br><br>
+
+    <!-- plano -->
+    <div>
+        <img src="/Imagens/foto-usuario.jpg" alt="foto-usuario" class="foto-usuario" style="float: right;">
+    </div><br><br><br>
+    
+    <div class="section-container">
+        <h2 class="section">Dados</h2>
+        <table class="tabela-dados">
+            <tr>
+                <td class="dados" style="color: #30E691;">Nome:</td>
+                <td class="dados" style="color: white;">José Henrique Sobrinho</td>
+            </tr>
+            <tr>
+                <td class="dados" style="color: #30E691;">Município:</td>
+                <td class="dados" style="color: white;">Rio de Janeiro</td>
+                <td class="dados" style="color: #30E691;">UF:</td>
+                <td class="dados" style="color: white;">RJ</td>
+            </tr>
+            <tr>
+                <td class="dados" style="color: #30E691;">Idade:</td>
+                <td class="dados" style="color: white;">30 anos</td>
+                <td class="dados" style="color: #30E691;">Altura:</td>
+                <td class="dados" style="color: white;">1.80m</td>
+                <td class="dados" style="color: #30E691;">Peso:</td>
+                <td class="dados" style="color: white;">105kg</td>
+            </tr>
+            <tr>
+                <td class="dados" style="color: #30E691;">Taxa de Metabolismo Basal</td>
+                <td class="dados" style="color: white;">1916 kcal</td>
+            </tr>
+            <tr>
+                <td class="dados" style="color: #30E691;">Status (IMC)</td>
+                <td class="dados" style="color: white;">Sobrepeso</td>
+            </tr>
+        </table>
+        <div class="btn1">
+            <a href="" class="grafico-btn" style="color: #000;">Imprimir Relatório Completo</a>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- gráficos -->
+    <div class="section-container">
+        <h2 class="section">Gráficos de Desempenho</h2>
+        <table class="graficos" style="color: white;">
+            <tr>
+                <td>
+                    <span style="margin-right: 150px;"></span>
+                    Peso
+                    <span style="margin-right: 215px;"></span>
+                    Massa Muscular
+                    <span style="margin-right: 140px;"></span>
+                    Gordura Corporal
+                <br>
+                    <span style="margin-right: 150px;"></span>
+                    <input type="image" name="Grafico-peso" src="Imagens/grafico-peso.png" alt="GraficoPeso" style="width: 200px; margin-right: 20px;">
+                    <span style="margin-right: 10px;"></span>
+                    <input type="image" name="Grafico-muscular" src="Imagens/grafico-muscular.png" alt="GraficoMusucular" style="width: 200px; margin-left: 20px;">
+                    <span style="margin-right: 10px;"></span>
+                    <input type="image" name="grafico-corporal" src="Imagens/grafico-corporal.png" alt="GraficoCorporal" style="width: 200px; margin-left: 40px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="margin-right: 150px;"></span>
+                    Gordura Visceral
+                    <span style="margin-right: 130px;"></span>
+                    Taxa de Água Corporal
+                    <span style="margin-right: 95px;"></span>
+                    Idade Metabólica
+                <br>
+                <span style="margin-right: 150px;"></span>
+                <input type="image" name="grafico-visceral" src="Imagens/grafico-visceral.png" alt="GraficoVisceral" style="width: 200px; margin-right: 20px;">
+                <span style="margin-right: 10px;"></span>
+                <input type="image" name="grafico-taxa" src="Imagens/grafico-taxa.png" alt="GraficoTaxa" style="width: 200px; margin-left: 20px;">
+                <span style="margin-right: 10px;"></span>
+                <input type="image" name="grafico-metabolica" src="Imagens/grafico-metabolica.png" alt="GraficoMeatabolica" style="width: 200px; margin-left: 40px;">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <div class="btn1">
+            <a href="" class="grafico-btn" style="color: #000;">Imprimir Relatório Completo</a>
+        </div>
+    </div>
+</body>
+</html>
