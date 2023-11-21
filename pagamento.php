@@ -103,20 +103,52 @@
             margin-right: 30px;
             text-align: center;
         }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        #logo img {
+            margin-right: 45px;
+        }
+        .logo-text {            
+            color: #FFF;
+            padding-right: 80px;
+            margin-left: 45px;
+            
+        }     
+
+        .voltar-container {
+        text-align: right;
+        margin: 20px 0 15; 
+        }
+
+        .voltar-link {
+            display: block;
+            margin-bottom: 80px;
+        }
+
+        .voltar-link h4 {
+            margin: 0; 
+            color: blue;
+        }
     </style> 
 </head>
 <body>
     <!-- cabeçalho -->
     <div id="logo">
-        <img src="/Imagens/icons8-barra-de-peso-100.png" alt="logo">
-        <h2 class="logo-text">Pagamento</h2>    
+    <img src="<?php echo 'Imagens/icons8-barra-de-peso-100.png' ?>" alt="logo">   
+    <h2 class="logo-text">Pagamento</h2>  
     </div>
     <br><br>
+
+    
 
     <!-- imagem -->
     <div class="container">
         <div class="image-container">
-            <img src="/Imagens/personal-trainer.jpg" alt="Imagem do profissional" style="max-width: 100%;">
+        <img src="<?php echo 'Imagens/personal-trainer.jpg' ?>" alt="Imagem do profissional" style="max-width: 100%;">            
         </div>
         <div class="text-container">
             <p>Nome: Marcelo Alves do Santos</p>
@@ -124,7 +156,11 @@
             <p>Avaliação: ★★★★ </p>
         </div>
     </div>
-    <br><br><br>
+    <div class="voltar-container">
+        <a href="area_do_aluno.php" class="voltar-link">
+        <h4><img src="Imagens/voltar.png" alt="pag"> Voltar</h4>
+        </a>
+    </div>
 
     <!-- plano -->
     <div class="section-container">
@@ -165,13 +201,13 @@
                     <tr>
                         <td><input type="radio" name="metodo_pagamento" id="cartao"></td>
                         <td><label for="cartao" style="color: white;">Cartão</label></td>
-                        <td><img src="Imagens/visa-cartao.png" alt="Visa" class="icones-pequenos"></td>
-                        <td><img src="/Imagens/master-cartao.png" alt="Master" class="icones-pequenos"></td>
+                        <td><img src="<?php echo 'Imagens/visa-cartao.png' ?>" alt="Visa" class="icones-pequenos"></td> 
+                        <td><img src="<?php echo 'Imagens/master-cartao.png' ?>" alt="Master" class="icones-pequenos"></td>
                     </tr>
                     <tr>
                         <td><input type="radio" name="metodo_pagamento" id="pix"></td>
                         <td><label for="pix" style="color: white;">Pix</label></td>
-                        <td><img src="/Imagens/pix-pag.png" alt="Pix" class="icones-pequenos"></td>
+                        <td><img src="<?php echo 'Imagens/pix-pag.png' ?>" alt="Pix" class="icones-pequenos"></td>                         
                         <td></td>
                     </tr>
                     <tr>
