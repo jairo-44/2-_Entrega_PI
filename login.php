@@ -154,8 +154,14 @@ if (isset($_POST['username']) || isset($_POST['senha'])){
                             <br>
                             <p class="text-center custom-text">Clique aqui e saiba mais sobre a gente.</p>
                             <br>
-                            <div id="register-link" class="text-right">
+                            <div id="register-link" class="text-right">                                
+                                <a href="cadastro_aluno.php" style="display: block; margin-bottom: 80px;">
                                 <h4 class="text-center custom-text">Cadastra-se aqui.</h4>
+                                </a>
+
+
+
+                                
                             </div>
                             <br><br>
                             <div id="redes">

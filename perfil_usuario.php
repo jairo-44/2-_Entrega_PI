@@ -205,11 +205,11 @@
                 <td class="dados" style="color: white;">105kg</td>
             </tr>
             <tr>
-                <td class="dados" style="color: #30E691;">Taxa de Metabolismo Basal:</td>
+                <td class="dados" style="color: #30E691;">Taxa de Metabolismo Basal</td>
                 <td class="dados" style="color: white;">1916 kcal</td>
             </tr>
             <tr>
-                <td class="dados" style="color: #30E691;">Status (IMC):</td>
+                <td class="dados" style="color: #30E691;">Status (IMC)</td>
                 <td class="dados" style="color: white;">Sobrepeso</td>
             </tr>
         </table>
